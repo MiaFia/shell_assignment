@@ -1,0 +1,81 @@
+1.1:
+I get a thing that shows me only the Txt file, since it is the only thing in that folder.
+This makes sense. It also shows me when I last wrote on it, the length of the txt file and a mode.
+
+The Get-Alias tells me what command a shortening stands for. So it tells me the alias and the name of the command.
+
+1.2:
+There is a lot more going on when pressing detailed. It also gives examples etc. 
+
+With the option of Attributes once can say to only get files with a certain attribute.
+
+> GCI -Read Returns nothing. There's no read only files in here.
+
+> GCI -Fi *.txt Returns the txt file. cool
+
+2.1:
+
+Current working directory is the shell magic folder. I am now restarting Power Shell in the bigger fold it is in.
+
+I see the commands in yellow and some error messages in red. Otherwise I only see everything in white. The changing didn't do anything. I am now continuiong in Shell magic.
+
+2.2:
+
+pwd
+
+sl  C:\Users\es\OneDrive\Dokumente\UCU\LabcourseData\WeekII\shell_magic
+
+3.1:
+
+My command was:
+ni
+[Path0] wd (I wanted to make it in the working directory)
+[Path1] Hello World
+
+This created two files as I saw when I ran gci. Also maybe don't include a space in a file name in general
+
+3.2
+
+PS C:\Users\es\OneDrive\Dokumente\UCU\LabcourseData\WeekII\shell_magic> ni -ItemType directory
+
+Cmdlet New-Item an der Befehlspipelineposition 1
+Geben Sie Werte für die folgenden Parameter an:
+Path[0]: hello_world
+
+3.3:
+
+It didn't work because there already is a directory named this way.
+
+> rni .\hello_world.bfe hello_world.txt
+> gci
+
+> mi .\hello_world.txt .\hello_world\
+
+> mi C:\Users\es\OneDrive\Dokumente\UCU\LabcourseData\WeekII\shell_magic\hello_world\hello_world.txt 
+-Destination C:\Users\es\OneDrive\Dokumente\UCU\LabcourseData\WeekII\shell_magic
+
+> sl .\hello_world
+> sl ..\
+
+To check whether I was where I wanted to be I always used gci then.
+It worked.
+
+3.4:
+
+The difference of moving and copying is that moving deletes the file from the original folder, while copying just copies the file and makes it again.
+
+> copy .\hello_world.txt -Destination .\hello_world\
+
+> copy .\hello_world.txt -Destination .\hello_world\world_hello.txt
+
+3.5:
+
+> ri .\hello_world.txt
+
+> ri  .\hello_world\hello_world.txt
+
+It tells me that it is a directory with different things in it. So it asks for confirmation.
+If I really want to do it, I have to press yes. It then tells me I cannot do it since I don't have access.
+
+
+ 
