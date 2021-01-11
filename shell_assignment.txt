@@ -77,6 +77,29 @@ The difference of moving and copying is that moving deletes the file from the or
 It tells me that it is a directory with different things in it. So it asks for confirmation.
 If I really want to do it, I have to press yes. It then tells me I cannot do it since I don't have access.
 
+> ri -Recurse -Force .\hello_world\
+One Drive somehow still would not let me do it. I therefore deleted it manually as Joska told me to.
+4.1:
+
+It gives me no output since there is nothing in the file whatsoever.
+4.2:
+
+> write file contents >file.txt
+> gc .\file.txt
+
+> write more contents >>.\file.txt
+> gc .\file.txt
+
+> gci C:\Users\es > home_contents.list gc .\home_contents.list
+
+> write lol this is a line >>.\home_contents.list
+> gc .\home_contents.list
+
+4.3:
+
+
+
+
 
 
  
