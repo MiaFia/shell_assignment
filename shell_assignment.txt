@@ -89,13 +89,58 @@ It gives me no output since there is nothing in the file whatsoever.
 
 > write more contents >>.\file.txt
 > gc .\file.txt
+4.3:
 
 > gci C:\Users\es > home_contents.list gc .\home_contents.list
 
 > write lol this is a line >>.\home_contents.list
 > gc .\home_contents.list
 
-4.3:
+The command oh -p just displays the same list for me. I don't know. 
+
+5:
+5.1:
+
+The measure-object command is similar to glimpse in R. It tells you the properties of an object.
+
+No I cannot do that.
+
+> gc .\file.txt | measure -Word, this works. Without the word it also does it but doesn't tell me exactly that it's 4 words.
+
+It takes the contents gained by get content and then measures that. It therefore cannot access the file directly but only if it is "unpacked" before by the 
+gc function. It does a similar thing by unpacking it first and then measuring it.
+
+> gci | measure
+I have four obejects in my working directory.
+5.2:
+
+It works in two different ways either in two lines with:
+
+> write "hello world" > helloworld.txt and > write "world hello" >>helloworld.txt
+
+or the other way in one single line:
+
+> write "hello world" "world hello" >.\helloworld.txt
+
+> sls "world" .\helloworld.txt 
+It gave me the output of which lines the word world can be found in and how the line goes.
+
+> sls hello .\helloworld.txt, .\worldhello.txt This is the command I used. It shows me where I use the word hello again by line and by which document.
+
+gci also unpacks a lot of different data it doesn't show when it's executed, like Attributes, Working Directory, Exists, CreationTimeUTC, etc. This can be seen when doing gci|select and then going through auto-complete options with tabs.
+
+ 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
