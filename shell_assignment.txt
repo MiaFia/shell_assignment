@@ -91,12 +91,12 @@ It gives me no output since there is nothing in the file whatsoever.
 > gc .\file.txt
 4.3:
 
-> gci C:\Users\es > home_contents.list gc .\home_contents.list
+> gci -Recurse C:\Users\es > home_contents.list gc .\home_contents.list
 
 > write lol this is a line >>.\home_contents.list
 > gc .\home_contents.list
 
-The command oh -p just displays the same list for me. I don't know. 
+The command oh -p makes the entire scrolling forever stop. It gives me the contents page by page with the option to exit. 
 
 5:
 5.1:
@@ -129,7 +129,33 @@ It gave me the output of which lines the word world can be found in and how the 
 
 gci also unpacks a lot of different data it doesn't show when it's executed, like Attributes, Working Directory, Exists, CreationTimeUTC, etc. This can be seen when doing gci|select and then going through auto-complete options with tabs.
 
+5.3:
+
+To find I did this:
+> sls hello .\helloworld.txt
+
+> gc .\helloworld.txt| sls world| measure -Word|oh -p
+
+This doesn't change anything since the list is so small.
+
+6:
+
+6.2:
+This command resulted in an aup folder:
+> tar.exe -xf .\aup.tar.gz
  
+6.3:
+
+Command: > gci -Recurse -Filter *.aup .\aup\|oh -p
+
+Example:
+C:\Users\es\OneDrive\Dokumente\UCU\LabcourseData\Wee
+    kII\shell_magic\aup\cohort1\s010fint
+Command:
+> gc .\aup\cohort1\s010fint\s010fint.aup |oh -p
+
+There are 964 files in the .aup folder. I used this pipeline to find it out:
+ > gci -Recurse -Filter *.aup .\aup\| measure
 
 
 
